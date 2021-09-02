@@ -91,6 +91,7 @@ class HomeLayout extends StatelessWidget {
                 ),
               Tab(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('Chats', style: buildTextStyle(),),
                       SizedBox(width: 3,),
