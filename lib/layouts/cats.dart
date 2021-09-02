@@ -1,10 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:whates_app_ui/constants/const.dart';
 import 'package:whates_app_ui/model/users.dart';
+import 'package:whates_app_ui/widget/alert_dialog.dart';
 
 class Chats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size=MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: kBakeColor,
       body: ListView.builder(
@@ -16,9 +19,18 @@ class Chats extends StatelessWidget {
               top: 10
             ),
             child: ListTile(
-              leading: CircleAvatar(
-                radius: 30,
-                backgroundImage: NetworkImage(usersList[index].imagUrl),
+              leading: GestureDetector(
+                onTap: (){
+                  final alert=MyDialog(users: usersList[index], size: size);
+                  showDialog(context: context, builder: (_)=>alert);
+                },
+                child: Hero(
+                  tag: usersList[index].id,
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: NetworkImage(usersList[index].imagUrl),
+                  ),
+                ),
               ),
               title: Text('${usersList[index].name}',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
               subtitle: Text('${usersList[index].msg}'),

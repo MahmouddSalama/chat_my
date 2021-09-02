@@ -11,8 +11,10 @@ class Users {
   final bool? seen;
   final bool call;
   final int typeCalling;
+  final int id;
 
   Users({
+    required this.id,
     required this.seen,
     required this.name,
     required this.imagUrl,
@@ -30,6 +32,7 @@ class Users {
 
 List<Users> usersList = [
   Users(
+    id: 0,
     seen: true,
     name: 'Mohamed Salama',
     imagUrl:
@@ -46,6 +49,7 @@ List<Users> usersList = [
 
   ),
   Users(
+    id: 1,
     seen: false,
     name: 'Boody',
     imagUrl:
@@ -61,6 +65,7 @@ List<Users> usersList = [
     typeCalling: 1,
   ),
   Users(
+    id: 2,
     seen: false,
     name: 'Ahmad Mohamed',
     imagUrl:
@@ -76,6 +81,7 @@ List<Users> usersList = [
     typeCalling: 0,
   ),
   Users(
+    id: 3,
     seen: false,
     name: 'AbdelRahman Mohamed',
     imagUrl:
@@ -91,6 +97,7 @@ List<Users> usersList = [
     typeCalling: 0,
   ),
   Users(
+    id: 4,
     seen: false,
     name: 'Tarek mohamed',
     imagUrl:
@@ -106,6 +113,7 @@ List<Users> usersList = [
     typeCalling: 1,
   ),
   Users(
+    id: 4,
     seen: true,
     name: 'Omar Mohamed',
     imagUrl:
@@ -121,6 +129,7 @@ List<Users> usersList = [
     typeCalling: 0,
   ),
   Users(
+    id: 5,
     seen: true,
     name: 'Mona Mohamed ',
     imagUrl:
@@ -136,6 +145,7 @@ List<Users> usersList = [
     typeCalling: 1,
   ),
   Users(
+    id: 6,
     seen: false,
     name: 'Nada Ahmad',
     imagUrl:
@@ -151,6 +161,7 @@ List<Users> usersList = [
     typeCalling: 1,
   ),
   Users(
+    id: 7,
     seen: false,
     name: 'Mohamed  Khaled',
     imagUrl:
@@ -166,6 +177,7 @@ List<Users> usersList = [
     typeCalling: 0,
   ),
   Users(
+    id: 8,
     seen: true,
     name: 'Mohamed Salama',
     imagUrl:
@@ -181,6 +193,7 @@ List<Users> usersList = [
     typeCalling: 1,
   ),
   Users(
+    id: 9,
     seen: false,
     name: 'Mohamed Salama',
     imagUrl:
@@ -196,6 +209,7 @@ List<Users> usersList = [
     typeCalling: 0,
   ),
   Users(
+    id: 10,
     seen: true,
     name: 'Boody',
     imagUrl:
@@ -211,6 +225,7 @@ List<Users> usersList = [
     typeCalling: 0,
   ),
   Users(
+    id: 11,
     seen: false,
     name: 'Ahmad Mohamed',
     imagUrl:
@@ -226,6 +241,7 @@ List<Users> usersList = [
     typeCalling: 1,
   ),
   Users(
+    id: 12,
     seen: true,
     name: 'AbdelRahman Mohamed',
     imagUrl:

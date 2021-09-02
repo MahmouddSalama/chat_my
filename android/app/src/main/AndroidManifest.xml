@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.whates_app_ui">
    <application
-        android:label="Chat My"
+        android:label="Chat Me"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"

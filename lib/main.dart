@@ -36,7 +36,7 @@ class HomeLayout extends StatelessWidget {
           elevation: 0,
           backgroundColor: KPcolor,
           title: Text(
-            'Chat My',
+            'Chat Me',
             style: TextStyle(
               fontSize: 21,
               color: KWhite.withOpacity(.8),
