@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:whates_app_ui/constants/const.dart';
 import 'package:whates_app_ui/model/users.dart';
+import 'package:whates_app_ui/screens/chat_pesson_screen.dart';
 import 'package:whates_app_ui/widget/alert_dialog.dart';
 
 class Chats extends StatelessWidget {
@@ -19,6 +20,9 @@ class Chats extends StatelessWidget {
               top: 10
             ),
             child: ListTile(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (_)=>ChatScreen(users: usersList[index])));
+              },
               leading: GestureDetector(
                 onTap: (){
                   final alert=MyDialog(users: usersList[index], size: size);

@@ -32,50 +32,54 @@ class _CameraState extends State<Camera> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: kBakeColor,
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
-            child: Container(
-              //alignment: Alignment(0,0),
-              width: size.width,
-              height: size.height*.5,
-             decoration: BoxDecoration(
-               color: KScolor,
-               borderRadius: BorderRadius.circular(30),
-             ),
-              child: _image==null?Align(
-                alignment: Alignment.center,
-                child: Text('No Photo catch',style: TextStyle(
-                    fontSize: 30,
-                    color: KWhite,
-                    fontWeight: FontWeight.bold
-                ),),
-              ):ClipRRect(
-                  borderRadius: BorderRadius.circular(30),
-                  child: Image.file(_image!,fit: BoxFit.fill,)),
-            ),
-          ),
-          TextButton(
-            onPressed: (){
-              getImage(ImageSource.camera);
-            },
-            child: Container(
-              alignment: Alignment(0,0),
-              width: 150,
-              height: 55,
-              decoration: BoxDecoration(
-                color: KPcolor,
-                borderRadius: BorderRadius.circular(20),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
+                child: Container(
+                  //alignment: Alignment(0,0),
+                  width: size.width,
+                  height: size.height*.5,
+                 decoration: BoxDecoration(
+                   color: KScolor,
+                   borderRadius: BorderRadius.circular(30),
+                 ),
+                  child: _image==null?Align(
+                    alignment: Alignment.center,
+                    child: Text('No Photo catch',style: TextStyle(
+                        fontSize: 30,
+                        color: KWhite,
+                        fontWeight: FontWeight.bold
+                    ),),
+                  ):ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: Image.file(_image!,fit: BoxFit.fill,)),
+                ),
               ),
-              child: Text('catch',style: TextStyle(
-                  fontSize: 25,
-                  color: KWhite,
-                  fontWeight: FontWeight.w600,
-              ),),
-            ),
+              TextButton(
+                onPressed: (){
+                  getImage(ImageSource.camera);
+                },
+                child: Container(
+                  alignment: Alignment(0,0),
+                  width: 150,
+                  height: 55,
+                  decoration: BoxDecoration(
+                    color: KPcolor,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text('catch',style: TextStyle(
+                      fontSize: 25,
+                      color: KWhite,
+                      fontWeight: FontWeight.w600,
+                  ),),
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

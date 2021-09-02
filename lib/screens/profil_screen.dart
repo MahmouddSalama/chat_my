@@ -21,46 +21,48 @@ class Profile extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 30,
-            ),
-            Stack(
-              children: [
-                CircleAvatar(
-                  radius: 100,
-                  backgroundColor: Colors.green,
-                  backgroundImage: AssetImage('asstes/images/user.png'),
-                ),
-                Positioned(
-                  bottom: 0,
-                  right: 0,
-                  child: FloatingActionButton(
-                    backgroundColor: KPcolor,
-                    onPressed: () {},
-                    child: Icon(Icons.camera_alt),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 30,
+              ),
+              Stack(
+                children: [
+                  CircleAvatar(
+                    radius: 100,
+                    backgroundColor: Colors.green,
+                    backgroundImage: AssetImage('asstes/images/user.png'),
                   ),
-                )
-              ],
-            ),
-            buildListTile(
-              text1: 'Name',
-              text2: 'mahmoud Salama',
-              icon: Icons.person,
-            ),
-            buildListTile(
-              text1: 'About',
-              text2: 'iam using whatsApp',
-              icon: Icons.info_outline,
-            ),
-            buildListTile(
-              text1: 'Phone',
-              text2: '01061835782',
-              icon: Icons.phone,
-            ),
-          ],
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: FloatingActionButton(
+                      backgroundColor: KPcolor,
+                      onPressed: () {},
+                      child: Icon(Icons.camera_alt),
+                    ),
+                  )
+                ],
+              ),
+              buildListTile(
+                text1: 'Name',
+                text2: 'mahmoud Salama',
+                icon: Icons.person,
+              ),
+              buildListTile(
+                text1: 'About',
+                text2: 'iam using whatsApp',
+                icon: Icons.info_outline,
+              ),
+              buildListTile(
+                text1: 'Phone',
+                text2: '01061835782',
+                icon: Icons.phone,
+              ),
+            ],
+          ),
         ),
       ),
     );
